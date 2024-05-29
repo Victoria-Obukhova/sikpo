@@ -1,0 +1,6 @@
+Milk Liquids 50 10
+Bread Bakery 30 20
+Apples Fruits 100 15
+Hammer Promtovari 120 5
+Laptop Electronics 1000 2
+List Promtovari 250 25
