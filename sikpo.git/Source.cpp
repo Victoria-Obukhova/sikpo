@@ -13,16 +13,12 @@ struct Product {
 
 int main() {
 
-    setlocale(LC_ALL, "ru");
-
-    // Открываем входной файл
     ifstream inFile("catalog.txt");
     if (!inFile.is_open()) {
-        cerr << "Ошибка при открытии файла catalog.txt" << endl;
+        cerr << "Oshybka pri otkrytii faila catalog.txt" << endl;
         return 1;
     }
 
-    // Считываем информацию о товарах
     Product products[100];
     int numProducts = 0;
     while (inFile >> products[numProducts].name >> products[numProducts].category >> products[numProducts].price >> products[numProducts].quantity) {
@@ -30,7 +26,6 @@ int main() {
     }
     inFile.close();
 
-    // Выводим товары в категории "Промтовары"
     cout << "Tovari in categoria \"Promtovari\":" << endl;
     for (int i = 0; i < numProducts; i++) {
         if (products[i].category == "Promtovari") {
@@ -38,7 +33,6 @@ int main() {
         }
     }
 
-    // Выводим товары стоимостью выше 100 рублей
     cout << "\nTovari cost more 100rub:" << endl;
     for (int i = 0; i < numProducts; i++) {
         if (products[i].price > 100) {
